@@ -1,0 +1,18 @@
+{
+  "name": "Memory",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Thomas-Maurer/javascript",
+  "authors": [
+    "Thomas Maurer <thomas.wellan@gmail.com>"
+  ],
+  "description": "memory game in JS",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
