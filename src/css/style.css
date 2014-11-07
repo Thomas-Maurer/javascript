@@ -1,3 +1,14 @@
 body {
     background-image: url("asset/background.jpg");
 }
+
+.thumbnail {
+	background-image: url("asset/background.jpg");
+}
+
+.faded {
+	opacity: 0;
+}
+.opaque {
+	opacity: 1;
+}

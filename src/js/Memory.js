@@ -1,14 +1,23 @@
 // A simple object with constructor.
 var mesImages = new Object({});
-mesImages.addresses = new Array( "memory01", "memory02","memory03","memory04","memory05","memory06");
+mesImages.addresses = new Array( "memory01", "memory02","memory03","memory04","memory05","memory06", "memory01", "memory02","memory03","memory04","memory05","memory06");
 //Doc ready
-$( document ).ready(function() {
+$( document ).ready(function () {
 	random();
+	$( "a" ).click(function (event) {
+	var id = event.target.id;
+	  $( "#"+id ).toggleClass('opaque');
+});
 });
 
 var random = function (){
 	mesImages.addresses = _.shuffle(mesImages.addresses);
 	$.each(mesImages.addresses, function (index, value) {
-  		$( ".row" ).append( "<div class='col-xs-6 col-md-3'><a href='#' class='thumbnail'><img src='css/asset/"+value+".png' alt='...''></a></div>" );
-	});
+    if (index == 6) {
+      $( ".container" ).append( "<div class='row'></div>");
+    }else{
+  		$( ".container" ).append( "<div class='col-md-2'><a href='#' class='thumbnail'><img class='faded' id="+index+" src='css/asset/"+value+".png' alt='...''></a></div>" );
+	}
+  });
 };
+
